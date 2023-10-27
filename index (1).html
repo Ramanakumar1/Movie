@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Ticket Booking</h1>
+    </header>
+    
+    <nav>
+        <!-- Navigation links go here -->
+    </nav>
+
+    <main>
+        <section id="movies">
+            <!-- Movie listings go here -->
+        </section>
+
+        <section id="booking-form">
+            <h2>Book Your Tickets</h2>
+            <form>
+                <label for="movie">Select a Movie:</label>
+                <select id="movie" name="movie">
+                    <option value="movie1">Movie 1</option>
+                    <option value="movie2">Movie 2</option>
+                    <!-- Add more movie options here -->
+                </select>
+
+                <label for="date">Select Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="quantity">Number of Tickets:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <!-- Add an event handler to display an alert when the "Book Tickets" button is clicked -->
+                <button type="button" onclick="bookTickets()">Book Tickets</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>2023 Movie Ticket Booking</p>
+    </footer>
+
+    <!-- JavaScript function to display an alert when the button is clicked -->
+    <script>
+        function bookTickets() {
+            var movie = document.getElementById("movie").value;
+            var date = document.getElementById("date").value;
+            var quantity = document.getElementById("quantity").value;
+            alert("You have booked " + quantity + " ticket(s) for " + movie + " on " + date + ".");
+        }
+    </script>
+</body>
+</html>
